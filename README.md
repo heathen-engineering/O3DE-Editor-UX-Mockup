@@ -16,7 +16,7 @@ O3DE's current dock system has fundamental issues:
 
 ## The Vision
 
-An editor workspace that works like a modern IDE:
+**An editor workspace that works like a modern IDE:
 
 - **Every window is a real OS window** — no custom window decorations, no dock widgets. Real OS windows on Wayland, Windows, X11 — everywhere it works.
 - **Browser-like tab management** — panels are tabs within a container. Drag a tab to tear off into a new window.
@@ -24,7 +24,7 @@ An editor workspace that works like a modern IDE:
 - **Auto-hiding tab bars** — the tab bar only appears when there's something to choose between. With one panel visible, the tab bar disappears and the panel fills the space. A small grab icon appears in the upper-left corner when you hover there, letting you summon the tab bar to grab the panel.
 - **Edge-anchored panels** — panels can be anchored (collapsed) to any edge of their container, showing a small tab indicator on that edge. Click the edge tab to expand the panel over the content. Click off to collapse it back. Multiple anchored panels on the same edge each expand independently. This is exactly how the terminal works in VS, Rider, and CLion.
 - **Menu only on the main window** — torn-off windows have no menu. The menu bar belongs to the main editor window.
-- **Layout presets** — save and restore workspace configurations (which panels are open, where they are, which are tabbed/anchored, split ratios) as JSON.
+- **Layout presets** — save and restore workspace configurations (which panels are open, where they are, which are tabbed/anchored, split ratios) as JSON.**
 
 ## Getting Involved
 
@@ -80,7 +80,7 @@ Full design spec written and documented in `memory/projects/ideal-editor-window.
 
 ### Prototype Gem 🚧 In Progress
 A working prototype is being built as an O3DE Gem:
-- **Gem location:** `../Heathen-IdealEditorWindow/` (separate repository)
+- **Gem location:** `../Editor-Mock-up-Project/Gems/UXMockup`
 - **Gem scaffold:** `gem.json`, `CMakeLists.txt` ✅
 - **EditorWindow (base class):** ✅
 - **EditorWindowContainer (main window):** ✅
@@ -97,17 +97,3 @@ All panels are empty styled placeholders — the value is in demonstrating the d
 - Console (dark background, monospace)
 - SomeCoolScript / AnotherCoolScript (mock script panels)
 - MainMenuUI / FriendsListUI / LeaderboardUI (mock UI panels)
-
-## Key Differences from O3DE Current
-
-| Aspect | Current O3DE | This Mockup |
-|--------|-------------|-------------|
-| Windows | Custom dock widgets | Real OS windows |
-| Docking | `AZ::Wt::DockWidget` | Custom tab body system |
-| Wayland | Broken | Works |
-| Tab management | Panel-specific | Universal |
-| Menu | In each dock window | Main window only |
-| Window hierarchy | Flat | Tree (body → tabs → splits) |
-| Layout presets | No | Yes (JSON) |
-| Collapse/anchor | Limited | Full (every panel) |
-| Tear-off | No | Yes |
