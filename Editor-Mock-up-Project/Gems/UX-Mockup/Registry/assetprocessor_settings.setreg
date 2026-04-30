@@ -1,0 +1,18 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                "ScanFolder UX-Mockup/Assets": {
+                    "watch": "@GEMROOT:UX-Mockup@/Assets",
+                    "recursive": 1,
+                    "order": 101
+                },
+                "ScanFolder UX-Mockup/Registry": {
+                    "watch": "@GEMROOT:UX-Mockup@/Registry",
+                    "recursive": 1,
+                    "order": 102
+                }
+            }
+        }
+    }
+}

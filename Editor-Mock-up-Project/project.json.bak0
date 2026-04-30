@@ -1,0 +1,46 @@
+{
+    "project_name": "Editor-Mock-up",
+    "version": "1.0.0",
+    "project_id": "{96EB4286-F0F8-4A11-B4C8-6975929563BF}",
+    "origin": "The primary repo for Editor-Mock-up goes here: i.e. http://www.mydomain.com",
+    "license": "What license Editor-Mock-up uses goes here: i.e. https://opensource.org/licenses/Apache-2.0 Or https://opensource.org/licenses/MIT etc.",
+    "display_name": "Editor-Mock-up",
+    "summary": "A short description of Editor-Mock-up.",
+    "canonical_tags": [
+        "Project"
+    ],
+    "user_tags": [
+        "Editor-Mock-up"
+    ],
+    "icon_path": "preview.png",
+    "engine": "o3de",
+    "external_subdirectories": [
+        "Gem"
+    ],
+    "restricted": "Editor-Mock-up",
+    "gem_names": [
+        "Editor-Mock-up",
+        "Atom",
+        "AudioSystem",
+        "CameraFramework",
+        "DebugDraw",
+        "DiffuseProbeGrid",
+        "EditorPythonBindings",
+        "EMotionFX",
+        "GameState",
+        "ImGui",
+        "LandscapeCanvas",
+        "LyShine",
+        "MiniAudio",
+        "PhysX",
+        "PrimitiveAssets",
+        "PrefabBuilder",
+        "SaveData",
+        "ScriptCanvasPhysics",
+        "ScriptEvents",
+        "StartingPointInput",
+        "TextureAtlas",
+        "WhiteBox",
+        "RemoteTools"
+    ]
+}

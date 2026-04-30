@@ -1,0 +1,18 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                "ScanFolder Editor-Mock-up/Assets": {
+                    "watch": "@GEMROOT:Editor-Mock-up@/Assets",
+                    "recursive": 1,
+                    "order": 101
+                },
+                "ScanFolder Editor-Mock-up/Registry": {
+                    "watch": "@GEMROOT:Editor-Mock-up@/Registry",
+                    "recursive": 1,
+                    "order": 102
+                }
+            }
+        }
+    }
+}

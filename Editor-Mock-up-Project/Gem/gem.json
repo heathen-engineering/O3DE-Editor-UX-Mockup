@@ -1,0 +1,29 @@
+{
+    "gem_name": "Editor-Mock-up",
+    "version": "1.0.0",
+    "display_name": "Editor-Mock-up",
+    "license": "What license Editor-Mock-up uses goes here: i.e. Apache-2.0 or MIT",
+    "license_url": "Link to the license web site goes here: i.e. https://opensource.org/licenses/Apache-2.0 Or https://opensource.org/licenses/MIT",
+    "origin": "The name of the originator goes here. i.e. XYZ Inc.",
+    "origin_url": "The primary repo for Editor-Mock-up goes here: i.e. http://www.mydomain.com",
+    "type": "",
+    "summary": "A short description of Editor-Mock-up.",
+    "canonical_tags": [
+        "Gem"
+    ],
+    "user_tags": [
+        "Editor-Mock-up"
+    ],
+    "platforms": [
+        "${Platforms}"
+    ],
+    "icon_path": "preview.png",
+    "requirements": "",
+    "documentation_url": "",
+    "dependencies": [
+    ],
+    "compatible_engines": [
+    ],
+    "engine_api_dependencies":[
+    ]
+}
