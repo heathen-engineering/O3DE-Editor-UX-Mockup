@@ -15,8 +15,7 @@ namespace UX_Mockup
         if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
         {
             serializeContext->Class<UX_MockupSystemComponent, AZ::Component>()
-                ->Version(0)
-                ;
+                ->Version(0);
         }
     }
 
@@ -41,17 +40,13 @@ namespace UX_Mockup
     UX_MockupSystemComponent::UX_MockupSystemComponent()
     {
         if (UX_MockupInterface::Get() == nullptr)
-        {
             UX_MockupInterface::Register(this);
-        }
     }
 
     UX_MockupSystemComponent::~UX_MockupSystemComponent()
     {
         if (UX_MockupInterface::Get() == this)
-        {
             UX_MockupInterface::Unregister(this);
-        }
     }
 
     void UX_MockupSystemComponent::Init()
@@ -61,17 +56,11 @@ namespace UX_Mockup
     void UX_MockupSystemComponent::Activate()
     {
         UX_MockupRequestBus::Handler::BusConnect();
-        AZ::TickBus::Handler::BusConnect();
     }
 
     void UX_MockupSystemComponent::Deactivate()
     {
-        AZ::TickBus::Handler::BusDisconnect();
         UX_MockupRequestBus::Handler::BusDisconnect();
-    }
-
-    void UX_MockupSystemComponent::OnTick([[maybe_unused]] float deltaTime, [[maybe_unused]] AZ::ScriptTimePoint time)
-    {
     }
 
 } // namespace UX_Mockup

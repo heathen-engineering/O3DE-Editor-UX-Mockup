@@ -1,32 +1,32 @@
 
-#include <AzCore/Utils/Utils.h>
+#include "UX-MockupWidget.h"
+
+#include <UX-Mockup/EditorWindowContainer.h>
 
 #include <QLabel>
+#include <QShowEvent>
 #include <QVBoxLayout>
-
-#include "UX-MockupWidget.h"
 
 namespace UX_Mockup
 {
     UX_MockupWidget::UX_MockupWidget(QWidget* parent)
         : QWidget(parent)
     {
-        QVBoxLayout* mainLayout = new QVBoxLayout(this);
+        auto* layout = new QVBoxLayout(this);
+        auto* label  = new QLabel(tr("UX Mockup Workspace is open in its own window."), this);
+        label->setAlignment(Qt::AlignCenter);
+        layout->addWidget(label);
+        setLayout(layout);
+    }
 
-        QLabel* introLabel = new QLabel(QObject::tr("Put your cool stuff here!"), this);
-        mainLayout->addWidget(introLabel, 0, Qt::AlignCenter);
+    void UX_MockupWidget::showEvent(QShowEvent* event)
+    {
+        QWidget::showEvent(event);
 
-        QString helpText = QString(
-            "For help getting started, visit the <a href=\"https://o3de.org/docs/tools-ui/\">UI Development</a> documentation<br/>or come ask a question in the <a href=\"https://discord.gg/R77Wss3kHe\">sig-ui-ux channel</a> on Discord");
-
-        QLabel* helpLabel = new QLabel(this);
-        helpLabel->setTextFormat(Qt::RichText);
-        helpLabel->setText(helpText);
-        helpLabel->setOpenExternalLinks(true);
-
-        mainLayout->addWidget(helpLabel, 0, Qt::AlignCenter);
-
-        setLayout(mainLayout);
+        Heathen::EditorWindowContainer* win = Heathen::EditorWindowContainer::createMainWindow();
+        win->show();
+        win->raise();
+        win->activateWindow();
     }
 }
 

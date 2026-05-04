@@ -2,7 +2,6 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <AzCore/Component/TickBus.h>
 #include <UX-Mockup/UX-MockupBus.h>
 
 namespace UX_Mockup
@@ -10,7 +9,6 @@ namespace UX_Mockup
     class UX_MockupSystemComponent
         : public AZ::Component
         , protected UX_MockupRequestBus::Handler
-        , public AZ::TickBus::Handler
     {
     public:
         AZ_COMPONENT_DECL(UX_MockupSystemComponent);
@@ -26,22 +24,9 @@ namespace UX_Mockup
         ~UX_MockupSystemComponent();
 
     protected:
-        ////////////////////////////////////////////////////////////////////////
-        // UX_MockupRequestBus interface implementation
-
-        ////////////////////////////////////////////////////////////////////////
-
-        ////////////////////////////////////////////////////////////////////////
-        // AZ::Component interface implementation
         void Init() override;
         void Activate() override;
         void Deactivate() override;
-        ////////////////////////////////////////////////////////////////////////
-
-        ////////////////////////////////////////////////////////////////////////
-        // AZTickBus interface implementation
-        void OnTick(float deltaTime, AZ::ScriptTimePoint time) override;
-        ////////////////////////////////////////////////////////////////////////
     };
 
 } // namespace UX_Mockup

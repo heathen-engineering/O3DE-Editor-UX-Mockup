@@ -5,4 +5,19 @@ set(FILES
     Source/Tools/UX-MockupWidget.cpp
     Source/Tools/UX-MockupWidget.h
     Source/Tools/UX-Mockup.qrc
+    Source/Tools/EditorWindowRegistry.cpp
+    Source/Tools/EditorWindow.cpp
+    Source/Tools/EditorWindowContainer.cpp
+    Source/Tools/EditorBody.cpp
+    Source/Tools/EditorTabBar.cpp
+    Source/Tools/TabDragController.cpp
+    Source/Tools/PanelTypes.h
+    Source/Tools/PanelTypes.cpp
+    Source/Tools/PinSystem.cpp
+    Include/UX-Mockup/EditorWindow.h
+    Include/UX-Mockup/EditorWindowContainer.h
+    Include/UX-Mockup/EditorBody.h
+    Include/UX-Mockup/EditorTabBar.h
+    Include/UX-Mockup/TabDragController.h
+    Include/UX-Mockup/PinSystem.h
 )
